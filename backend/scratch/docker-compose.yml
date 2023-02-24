@@ -1,0 +1,19 @@
+version: "3.3"
+services:
+  traefik:
+    image: "leejoneshane/scratch3"
+    container_name: "sratch"
+    restart: always
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.sratch.rule=Host(`coding.localhost`)"
+      - "traefik.http.routers.sratch.entrypoints=web"
+      - "com.centurylinklabs.watchtower.scope=sratch"
+    ports:
+      - "7700:80"
+    networks:
+      - web
+
+networks:
+  web:
+    external: true

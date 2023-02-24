@@ -1,0 +1,22 @@
+version: "3.3"
+services:
+  kolibri:
+    image: "ulmefors/kolibri"
+    container_name: "kolibri"
+    restart: always
+    volumes:
+      - "kolibri_data:/var/kolibri/.kolibri"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.kolibri.rule=Host(`kolibri.localhost`)"
+      - "traefik.http.routers.kolibri.entrypoints=web"
+    networks:
+      - web
+
+volumes:
+  kolibri_data:
+    name: kolibri_data
+
+networks:
+  web:
+    external: true

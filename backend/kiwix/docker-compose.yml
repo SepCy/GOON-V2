@@ -1,0 +1,24 @@
+version: "3.3"
+services:
+  
+  kiwix:
+    image: "kiwix/kiwix-serve"
+    container_name: "kiwix"
+    restart: always
+    volumes:
+      - "${KIWIX_VOLUME}:/data"
+    networks:
+      - web
+    command: 
+      "${COMMAND}"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.kiwix.rule=Host(`${KIWIX_DOMAIN_NAME}`)"
+      - "traefik.http.routers.kiwix.entrypoints=${TRAEFIK_ENTRYPOINT}"
+      - "traefik.http.services.my-webservice.loadbalancer.server.port=8080"
+    ports:
+      - "7500:8080"
+
+networks:
+  web:
+    external: true

@@ -1,0 +1,15 @@
+version: "3.3"
+services:
+  ludo:
+    image: "cybercitizen01/the-ludo-game"
+    container_name: "ludo"
+    restart: always
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.ludo.rule=Host(`ludo.localhost`)"
+      - "traefik.http.routers.ludo.entrypoints=web"
+    networks:
+      - web
+networks:
+  web:
+    external: true

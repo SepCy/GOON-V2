@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('../public/font/Nunito-Light.ttf');
+  src: url('../public/font/Nunito-Medium.ttf');
+  font-weight: 200;
+  font-style: normal;
+}
+
+html,
+body {
+  font-family: Nunito;
+  letter-spacing: 0.8px;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 1rem;
+}
+
+@keyframes pulse {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  25% {
+    width: 15px;
+    height: 15px;
+    opacity: 0;
+  }
+  50% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}

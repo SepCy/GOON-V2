@@ -12,7 +12,7 @@ An open-source platform designed to bridge the digital divide between rural and 
 join our community and fill free to contribute to our open-source solution
 our discord :
 
-Join our `Discord Channel` [join]("https://discord.gg/vNNsKGZN").
+Join our `Discord Channel` [join](https://discord.gg/vNNsKGZN).
 
 # Getting Started
 

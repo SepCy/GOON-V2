@@ -21,7 +21,7 @@ You need to install  `docker`  and  `docker-compose`  [install](https://docs.doc
 Clone this repository. 	
 ```bash
 
-git clone https://github.com/gooninitiative/api.git
+git clone https://github.com/SepCy/GOON-v.2.git
 
 ```
 

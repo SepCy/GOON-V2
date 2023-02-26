@@ -12,7 +12,7 @@ An open-source platform designed to bridge the digital divide between rural and 
 join our community and fill free to contribute to our open-source solution
 our discord :
 
-Join our `Discord Channel` [join]("https://discord.gg/vNNsKGZN").
+Join our `Discord Channel` [join](https://discord.gg/vNNsKGZN).
 
 # Getting Started
 
@@ -26,11 +26,11 @@ Clone this repository.
 
 ```bash
 
-git clone https://github.com/gooninitiative/api.git
+git clone https://github.com/SepCy/GOON-v.2.git
 
 ```
 
-### Open the frontend services.
+### Open the frontend service.
 
 ```bash
 
@@ -48,7 +48,7 @@ docker-compose up -d
 
 ### Open the browser
 
-Open one off your browser to :
+Open one of your browser to :
 
 ```bash
 

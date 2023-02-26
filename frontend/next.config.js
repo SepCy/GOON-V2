@@ -16,7 +16,7 @@ const securityHeaders = [
 ];
 
 const nextConfig = {
-  reactStrictMode: true, // Recommended for the `pages` directory, default in `app`.
+  reactStrictMode: false, // Recommended for the `pages` directory, default in `app`.
   experimental: {
     // Required:
     appDir: true,
@@ -25,8 +25,8 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'http',
-        hostname: 'localhost',
-        port: '9080',
+        hostname: 'goon.test',
+        port: '',
       },
     ],
   },

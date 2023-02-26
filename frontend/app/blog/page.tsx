@@ -7,7 +7,7 @@ import BlogLayout from './layout';
 
 async function getData() {
   const res = await fetch(
-    ' http://localhost:9080/wp-json/wp/v2/posts?_embed&order=desc&per_page=100&status=publish',
+    ' http://goon.test/wp-json/wp/v2/posts?_embed&order=desc&per_page=100&status=publish',
   );
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
@@ -24,7 +24,7 @@ async function getData() {
 const Blog = async () => {
   const data = await getData();
   const homepageData = await getPagesData(
-    'http://localhost:9080/wp-json/wp/v2/pages/164?acf_format=standard',
+    'http://goon.test/wp-json/wp/v2/pages/164?acf_format=standard',
   );
   const dataArr = data;
   return (

@@ -5,10 +5,7 @@ import Stylo from '../public/images/writing.png';
 const Survey = () => {
   return (
     <div>
-      <ToggleContainer
-        iconSrc={Stylo}
-        iframeUrl=" http://localhost:9080/survey/"
-      />
+      <ToggleContainer iconSrc={Stylo} iframeUrl=" http://goon.test/survey/" />
     </div>
   );
 };

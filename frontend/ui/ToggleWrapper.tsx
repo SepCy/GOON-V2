@@ -8,7 +8,7 @@ type Props = {
 
 const ToggleWrapper: React.FC<Props> = ({ state }) => {
   return (
-    <div className="fixed -top-4 right-0 z-50 flex h-full sm:top-32 ">
+    <div className="fixed -top-4 right-0 z-20 flex h-full sm:top-32 ">
       {state ? <Survey /> : ''}
       <PodCast />
     </div>

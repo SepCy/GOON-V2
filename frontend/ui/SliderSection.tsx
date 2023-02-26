@@ -13,7 +13,6 @@ type Props = {
 };
 
 const SliderSection: React.FC<Props> = ({ data }) => {
-  console.log(data);
   const [sliderRef] = useKeenSlider<HTMLDivElement>(
     {
       loop: true,

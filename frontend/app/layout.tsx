@@ -1,6 +1,5 @@
 import '@/styles/globals.css';
-import Header from '@/ui/Header';
-import HeroSection from '@/ui/HeroSection';
+import Head from 'next/head';
 import React from 'react';
 
 export default function RootLayout({
@@ -10,10 +9,12 @@ export default function RootLayout({
 }) {
   return (
     <html>
-      <head>
+      <Head>
         <title>GOON</title>
-      </head>
-      <body className="overflow-y-scroll lg:relative ">{children}</body>
+      </Head>
+      <body className="overflow-y-scroll lg:relative ">
+        <div>{children}</div>
+      </body>
     </html>
   );
 }

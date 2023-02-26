@@ -6,7 +6,7 @@ import React from 'react';
 
 async function getData(slug: string) {
   const res = await fetch(
-    ` http://localhost:9080/wp-json/wp/v2/posts?_embed&slug=${slug}`,
+    ` http://goon.test/wp-json/wp/v2/posts?_embed&slug=${slug}`,
   );
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.

@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Bubble from '../public/images/bubble.svg';
 import Goon from '../public/images/goon.svg';
 import Button from './Button';
@@ -12,7 +12,6 @@ type Props = {
 };
 
 const PresentationComponent: React.FC<Props> = ({ data }) => {
-  console.log(data);
   const [state, setState] = useState(1);
 
   return (

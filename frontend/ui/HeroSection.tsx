@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import React from 'react';
-import HomeImage from '../public/images/homeImage.png';
 import Header from './Header';
 import HeroSectionText from './HeroSectionText';
 

@@ -10,7 +10,7 @@ import { getPagesData } from '@/lib/utils';
 
 const Services = async () => {
   const homepageData = await getPagesData(
-    ' http://localhost:9080/wp-json/wp/v2/pages/164?acf_format=standard',
+    ' http://goon.test/wp-json/wp/v2/pages/164?acf_format=standard',
   );
 
   return (

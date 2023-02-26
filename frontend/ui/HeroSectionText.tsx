@@ -9,8 +9,6 @@ type Props = {
 };
 
 const HeroSectionText: React.FC<Props> = ({ data }) => {
-  console.log(data);
-
   let newDate = new Date(data?.date);
   return (
     <div className="absolute top-32 left-8 md:left-1/4 lg:absolute lg:left-1/4 lg:top-64">

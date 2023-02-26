@@ -18,8 +18,8 @@ const Header: React.FC<Props> = ({ type, image }) => {
     <div
       className={
         type === 'services' && 'blog'
-          ? ` absolute  left-0 right-0 -top-1 z-10 flex items-baseline  justify-between shadow-md md:absolute md:left-0 md:right-0 md:-top-1 md:flex md:items-baseline md:justify-between lg:absolute lg:left-0 lg:right-0 lg:flex lg:items-center lg:justify-between lg:text-white`
-          : `absolute right-0 left-0 top-0 z-10 flex justify-between md:absolute md:right-0 md:left-0 md:top-0 md:flex md:justify-between lg:absolute lg:top-0 lg:left-0 lg:right-0 lg:flex lg:justify-between lg:text-white `
+          ? ` absolute  left-0 right-0 -top-1 z-50 flex items-baseline  justify-between shadow-md md:absolute md:left-0 md:right-0 md:-top-1 md:flex md:items-baseline md:justify-between lg:absolute lg:left-0 lg:right-0 lg:flex lg:items-center lg:justify-between lg:text-white`
+          : `absolute right-0 left-0 top-0 z-50 flex justify-between md:absolute md:right-0 md:left-0 md:top-0 md:flex md:justify-between lg:absolute lg:top-0 lg:left-0 lg:right-0 lg:flex lg:justify-between lg:text-white `
       }
     >
       {type === 'services' ? (
@@ -46,7 +46,7 @@ const Header: React.FC<Props> = ({ type, image }) => {
         ''
       )}
 
-      <Link className="z-10 lg:z-10" href="/">
+      <Link className="z-100 lg:z-10" href="/">
         <Image height={150} width={150} src={Logo} alt="Logo" />
       </Link>
       <GrMenu

@@ -1,20 +1,22 @@
+import { getPagesData } from '@/lib/utils';
 import Footer from '@/ui/Footer';
 import Header from '@/ui/Header';
-import ToggleWrapper from '@/ui/ToggleWrapper';
 import React from 'react';
 
-const Videos = () => {
+const Videos = async () => {
+  const data = await getPagesData(
+    'http://goon.test//wp-json/wp/v2/pages/?slug=video-category',
+  );
+
   return (
     <div>
       <Header type="services" />
 
-      <div className="relative bg-slate-400 pt-32 lg:h-full lg:w-full">
-        <iframe
-          height={700}
-          src="http://localhost:9080/video-category/gallerie/"
-          className="bottom-0 left-0 mt-16 w-full bg-slate-400"
-        />
-      </div>
+      <iframe
+        src="http://goon.test/pgc_simply_gallery/206/"
+        className="scrollbar-hide bottom-0 left-0 right-0 mx-4 w-full overflow-x-hidden px-4 pt-64 sm:mx-0 sm:px-16"
+        height={2000}
+      />
 
       <Footer />
     </div>

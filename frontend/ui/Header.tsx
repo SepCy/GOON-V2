@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
-import Logo from '../public/images/logo.svg';
+import Logo from '../public/images/Logo.svg';
 import Banniere from '../public/images/homeImage.png';
 import { GrMenu } from 'react-icons/gr';
 

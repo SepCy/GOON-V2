@@ -1,33 +1,13 @@
+version: '3.8'
 services:
-  # auth-backend:
-  #   build:
-  #     context: .
-  #   ports:
-  #     - "3001:3001"
-  #   networks:
-  #     - dev
-     
-  client:
+  web:
     build:
-      context: .
+      context: ./
+      target: runner
     volumes:
-      - staticbuild:/app/out
-    networks:
-      - dev
- 
-  nginx:
-    build:
-      context: ./nginx
-    volumes:
-      - staticbuild:/app/public
+      - .:/app
+    command: npm run start
     ports:
-      - “8080:80”
-    networks:
-      - dev
- 
-  networks:
-    dev:
-      driver: bridge
- 
-  volumes:
-    staticbuild:
+      - '9000:9000'
+    environment:
+      NODE_ENV: production

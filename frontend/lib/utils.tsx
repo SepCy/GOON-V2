@@ -10,7 +10,8 @@ export const formatDate = (date: any) => {
 
 export async function getData() {
   const res = await fetch(
-    'http://localhost:9080/wp-json/wp/v2/posts?_embed&order=desc&per_page=100&status=publish',
+    'http://127.0.0.1:9080/wp-json/wp/v2/posts?_embed&order=desc&per_page=100&status=publish',
+    { cache: 'no-store' },
   );
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
@@ -25,7 +26,7 @@ export async function getData() {
 }
 
 export async function getPagesData(url: string) {
-  const res = await fetch(url);
+  const res = await fetch(url, { cache: 'no-store' });
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
 

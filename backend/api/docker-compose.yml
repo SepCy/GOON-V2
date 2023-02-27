@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 
 services:
   mysql:
@@ -23,12 +23,12 @@ services:
       - "9080:80"
     volumes:
       # For full wordpress development
-      # - ./src:/var/www/html
+      - ./src:/var/www/html
       # For plugin development
       - ./src/wp-content/plugins/:/var/www/html/wp-content/plugins/
       # For theme development
       - ./src/wp-content/themes/:/var/www/html/wp-content/themes/
-      - ./wordpress.ini:/usr/local/etc/php/conf.d/wordpress.ini 
+      - ./wordpress.ini:/usr/local/etc/php/conf.d/wordpress.ini
     environment:
       WORDPRESS_DB_HOST: mysql
       WORDPRESS_DB_NAME: mywordpresssite

@@ -12,7 +12,7 @@ export default async function Page() {
   const data = await getData();
 
   const homepageData = await getPagesData(
-    'http://goon.test/wp-json/wp/v2/pages/164?acf_format=standard',
+    'http://localhost:9080/wp-json/wp/v2/pages/164?acf_format=standard',
   );
 
   return (
@@ -22,7 +22,7 @@ export default async function Page() {
         data={data[0]}
       />
       <iframe
-        src="http://goon.test/pgc_simply_gallery/206/"
+        src="http://localhost:9080/pgc_simply_gallery/206/"
         className="hidden w-0"
         height={0}
       />

@@ -5,7 +5,7 @@ import React from 'react';
 
 const Videos = async () => {
   const data = await getPagesData(
-    'http://goon.test//wp-json/wp/v2/pages/?slug=video-category',
+    'http://localhost:9080/wp-json/wp/v2/pages/?slug=video-category',
   );
 
   return (
@@ -13,7 +13,7 @@ const Videos = async () => {
       <Header type="services" />
 
       <iframe
-        src="http://goon.test/pgc_simply_gallery/206/"
+        src="http://localhost:9080/pgc_simply_gallery/206/"
         className="scrollbar-hide bottom-0 left-0 right-0 mx-4 w-full overflow-x-hidden px-4 pt-64 sm:mx-0 sm:px-16"
         height={2000}
       />

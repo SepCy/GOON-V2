@@ -10,7 +10,7 @@ export const formatDate = (date: any) => {
 
 export async function getData() {
   const res = await fetch(
-    'http://goon.test/wp-json/wp/v2/posts?_embed&order=desc&per_page=100&status=publish',
+    'http://localhost:9080/wp-json/wp/v2/posts?_embed&order=desc&per_page=100&status=publish',
   );
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.

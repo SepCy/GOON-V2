@@ -25,8 +25,8 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'http',
-        hostname: 'goon.test',
-        port: '',
+        hostname: 'localhost',
+        port: '9080',
       },
     ],
   },

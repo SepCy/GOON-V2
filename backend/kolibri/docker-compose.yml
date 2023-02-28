@@ -6,12 +6,14 @@ services:
     restart: always
     volumes:
       - "kolibri_data:/var/kolibri/.kolibri"
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.kolibri.rule=Host(`kolibri.localhost`)"
-      - "traefik.http.routers.kolibri.entrypoints=web"
+    # labels:
+    #   - "traefik.enable=true"
+    #   - "traefik.http.routers.kolibri.rule=Host(`kolibri.goon.tcp`)"
+    #   - "traefik.http.routers.kolibri.entrypoints=web"
     networks:
       - web
+    ports:
+      - 3001:8080
 
 volumes:
   kolibri_data:

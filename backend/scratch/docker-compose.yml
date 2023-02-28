@@ -4,15 +4,14 @@ services:
     image: "leejoneshane/scratch3"
     container_name: "sratch"
     restart: always
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.sratch.rule=Host(`coding.localhost`)"
-      - "traefik.http.routers.sratch.entrypoints=web"
-      - "com.centurylinklabs.watchtower.scope=sratch"
+    # labels:
+    #   - "traefik.enable=true"
+    #   - "traefik.http.routers.sratch.rule=Host(`coding.localhost`)"
+    #   - "traefik.http.routers.sratch.entrypoints=web"
+    #   - "com.centurylinklabs.watchtower.scope=sratch"
     ports:
-      - "7700:80"
-    networks:
-      - web
+      - "3006:80"
+
 
 networks:
   web:

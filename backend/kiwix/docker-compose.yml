@@ -11,13 +11,13 @@ services:
       - web
     command: 
       "${COMMAND}"
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.kiwix.rule=Host(`${KIWIX_DOMAIN_NAME}`)"
-      - "traefik.http.routers.kiwix.entrypoints=${TRAEFIK_ENTRYPOINT}"
-      - "traefik.http.services.my-webservice.loadbalancer.server.port=8080"
+    # labels:
+    #   - "traefik.enable=true"
+    #   - "traefik.http.routers.kiwix.rule=Host(`${KIWIX_DOMAIN_NAME}`)"
+    #   - "traefik.http.routers.kiwix.entrypoints=${TRAEFIK_ENTRYPOINT}"
+    #   - "traefik.http.services.my-webservice.loadbalancer.server.port=8080"
     ports:
-      - "7500:8080"
+      - "3003:8080"
 
 networks:
   web:

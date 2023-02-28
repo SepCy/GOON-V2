@@ -4,10 +4,12 @@ services:
     image: "cybercitizen01/the-ludo-game"
     container_name: "ludo"
     restart: always
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.ludo.rule=Host(`ludo.localhost`)"
-      - "traefik.http.routers.ludo.entrypoints=web"
+    ports:
+      - 3002:3000
+    # labels:
+    #   - "traefik.enable=true"
+    #   - "traefik.http.routers.ludo.rule=Host(`ludo.goon.tcp`)"
+    #   - "traefik.http.routers.ludo.entrypoints=web"
     networks:
       - web
 networks:

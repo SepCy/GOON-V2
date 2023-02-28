@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev -p 3002",
-    "build": "next build  -p 3002",
+    "build": "next build",
     "start": "next start -p 3002",
     "lint": "next lint",
     "format": "prettier --write \"**/*.{js,ts,tsx,md}\""
@@ -16,7 +16,7 @@
   "dependencies": {
     "clsx": "1.2.1",
     "keen-slider": "6.8.5",
-    "next": "latest",
+    "next": "13.2",
     "nprogress": "0.2.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",

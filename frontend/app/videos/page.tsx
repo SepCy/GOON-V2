@@ -13,7 +13,7 @@ const Videos = async () => {
       <Header type="services" />
 
       <iframe
-        src="http://127.0.0.1/pgc_simply_gallery/206/"
+        src={`${process.env.BACKEND_URL}/pgc_simply_gallery/206/`}
         className="scrollbar-hide bottom-0 left-0 right-0 mx-4 w-full overflow-x-hidden px-4 pt-64 sm:mx-0 sm:px-16"
         height={2000}
       />

@@ -16,7 +16,8 @@ const securityHeaders = [
 ];
 
 const nextConfig = {
-  reactStrictMode: false, // Recommended for the `pages` directory, default in `app`.
+  output: 'standalone',
+  reactStrictMode: true, // Recommended for the `pages` directory, default in `app`.
   experimental: {
     // Required:
     appDir: true,

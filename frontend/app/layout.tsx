@@ -1,5 +1,4 @@
 import '@/styles/globals.css';
-import Head from 'next/head';
 import React from 'react';
 
 export default function RootLayout({
@@ -9,9 +8,9 @@ export default function RootLayout({
 }) {
   return (
     <html>
-      <Head>
+      <head>
         <title>GOON</title>
-      </Head>
+      </head>
       <body className="overflow-y-scroll lg:relative ">
         <div>{children}</div>
       </body>

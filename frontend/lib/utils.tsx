@@ -10,7 +10,7 @@ export const formatDate = (date: any) => {
 
 export async function getData() {
   const res = await fetch(
-    'http://127.0.0.1:9080/wp-json/wp/v2/posts?_embed&order=desc&per_page=100&status=publish',
+    `${process.env.BACKEND_URL}/wp-json/wp/v2/posts?_embed&order=desc&per_page=100&status=publish`,
     { cache: 'no-store' },
   );
   // The return value is *not* serialized

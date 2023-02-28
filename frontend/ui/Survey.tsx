@@ -7,7 +7,7 @@ const Survey = () => {
     <div>
       <ToggleContainer
         iconSrc={Stylo}
-        iframeUrl="http://127.0.0.1:9080/survey/"
+        iframeUrl={`${process.env.BACKEND_URL}/survey/`}
       />
     </div>
   );

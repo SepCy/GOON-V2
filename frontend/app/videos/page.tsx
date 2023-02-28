@@ -5,7 +5,7 @@ import React from 'react';
 
 const Videos = async () => {
   const data = await getPagesData(
-    'http://127.0.0.1:9080/wp-json/wp/v2/pages/?slug=video-category',
+    `${process.env.BACKEND_URL}/wp-json/wp/v2/pages/?slug=video-category`,
   );
 
   return (

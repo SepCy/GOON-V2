@@ -8,15 +8,16 @@ import { getPagesData } from '@/lib/utils';
 import { useRouter } from 'next/navigation';
 
 const Services = async () => {
-
-
   const homepageData = await getPagesData(
     `${process.env.BACKEND_URL}/wp-json/wp/v2/pages/164?acf_format=standard`,
   );
 
   return (
     <ServicesLayout>
-      <Header type="services" image={homepageData?.acf?.image_page_services.toString().slice(41)} />
+      <Header
+        type="services"
+        image={homepageData?.acf?.image_page_services.toString().slice(34)}
+      />
       <BgParticles />
       <div className="z-10 pt-64">
         <div className="lg:w-11/12">

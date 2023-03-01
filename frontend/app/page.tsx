@@ -18,7 +18,7 @@ export default async function Page() {
   return (
     <RootLayout>
       <HeroSection
-        homeImageUrl={homepageData?.acf?.image_daccueil.toString().slice(41)}
+        homeImageUrl={homepageData?.acf?.image_daccueil.toString().slice(34)}
         data={data[0]}
       />
       <iframe

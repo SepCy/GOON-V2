@@ -62,7 +62,7 @@ const SliderSection: React.FC<Props> = ({ data }) => {
           className=" w-3/5 md:w-2/4"
           alt="Boy with books"
           width={500}
-          src={data?.slider_1?.image.toString().slice(41)}
+          src={data?.slider_1?.image.toString().slice(34)}
           height={600}
           loader={customLoader}
         />
@@ -76,7 +76,7 @@ const SliderSection: React.FC<Props> = ({ data }) => {
           className="w-3/5 md:w-2/4"
           alt="Boy with books"
           width={500}
-          src={data?.slider_2?.image.toString().slice(41)}
+          src={data?.slider_2?.image.toString().slice(34)}
           height={600}
           loader={customLoader}
         />
@@ -90,7 +90,7 @@ const SliderSection: React.FC<Props> = ({ data }) => {
           className=" w-3/5 md:w-2/4"
           width={500}
           height={600}
-          src={data?.slider_3?.image.toString().slice(41)}
+          src={data?.slider_3?.image.toString().slice(34)}
           loader={customLoader}
         />
         <div className="w-2/5 pr-2 pl-2 text-orange-500 md:pl-8 md:pr-16 lg:w-2/4 lg:pr-32 lg:text-3xl">

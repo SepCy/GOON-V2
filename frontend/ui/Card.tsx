@@ -1,4 +1,4 @@
-"use client"
+'use client';
 import { customLoader } from '@/lib/loader';
 import { formatDate } from '@/lib/utils';
 import Image from 'next/image';
@@ -34,7 +34,7 @@ const Card: React.FC<Props> = ({
         <div>
           {featured_media ? (
             <Image
-              src={featured_media[0].source_url.toString().slice(41)}
+              src={featured_media[0].source_url.toString().slice(34)}
               alt={alt}
               width={400}
               height={100}

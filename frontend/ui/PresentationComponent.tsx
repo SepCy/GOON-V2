@@ -33,7 +33,7 @@ const PresentationComponent: React.FC<Props> = ({ data }) => {
         <div className="relative z-10 my-4  ml-16 lg:my-24 lg:ml-48 ">
           <span>
             <Image
-              src={data?.service_1?.image.toString().slice(41)}
+              src={data?.service_1?.image.toString().slice(34)}
               loader={customLoader}
               alt="Image 1"
               width={100}
@@ -49,7 +49,7 @@ const PresentationComponent: React.FC<Props> = ({ data }) => {
 
           <span>
             <Image
-              src={data?.service_2?.image.toString().slice(41)}
+              src={data?.service_2?.image.toString().slice(34)}
               loader={customLoader}
               alt="Image 2"
               width={100}
@@ -65,7 +65,7 @@ const PresentationComponent: React.FC<Props> = ({ data }) => {
           {/* Top right*/}
           <span>
             <Image
-              src={data?.service_3?.image.toString().slice(41)}
+              src={data?.service_3?.image.toString().slice(34)}
               loader={customLoader}
               alt="Image 3"
               width={100}
@@ -81,7 +81,7 @@ const PresentationComponent: React.FC<Props> = ({ data }) => {
           {/* Bottom right*/}
           <span>
             <Image
-              src={data?.service_4?.image.toString().slice(41)}
+              src={data?.service_4?.image.toString().slice(34)}
               loader={customLoader}
               alt="Image 4"
               width={100}

@@ -29,16 +29,24 @@ const Dashboard = () => {
 
         <div className="z-10 mx-2 mt-12 flex justify-between">
           <DashboardService
-            link=""
+            link={`${process.env.GOON_ADMIN}`}
             logo={Goon}
             title="Admin Principal (Blog, Vidéos et Survey)"
           />
-          <DashboardService link="" logo={Radio} title="Admin Radio" />
-
-          <DashboardService link={''} logo={Kolibri} title="Admin Kolibri" />
+          <DashboardService
+            link={`${process.env.AZURECAST_ADMIN}`}
+            logo={Radio}
+            title="Admin Radio"
+          />
 
           <DashboardService
-            link={''}
+            link={`${process.env.KOLIBRI_ADMIN}`}
+            logo={Kolibri}
+            title="Admin Kolibri"
+          />
+
+          <DashboardService
+            link={`${process.env.ROCKETCHAT_ADMIN}`}
             logo={RocketChat}
             title="Admin Messagerie"
           />

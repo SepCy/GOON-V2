@@ -7,7 +7,7 @@ const Survey = () => {
     <div>
       <ToggleContainer
         iconSrc={Stylo}
-        iframeUrl={`${process.env.BACKEND_URL}/survey/`}
+        iframeUrl={`${process.env.SURVEY_LINK}`}
       />
     </div>
   );

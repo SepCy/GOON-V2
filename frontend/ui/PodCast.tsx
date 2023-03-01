@@ -6,7 +6,7 @@ const PodCast = () => {
   return (
     <div>
       <ToggleContainer
-        iframeUrl="http://localhost:8009/public/radio"
+        iframeUrl={`${process.env.RADIO_LINK}`}
         iconSrc={RadioIcon}
       />
     </div>

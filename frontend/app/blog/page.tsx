@@ -7,7 +7,7 @@ import BlogLayout from './layout';
 
 async function getData() {
   const res = await fetch(
-    `${process.env.BACKEND_URL}/wp-json/wp/v2/posts?_embed&order=desc&per_page=100&status=publish`,
+    `${process.env.BACKEND_URL}/wp-json/wp/v2/posts?_embed&order=desc&per_page=100&status=publish`, { next: { revalidate: 10 } }
   );
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
@@ -29,7 +29,7 @@ const Blog = async () => {
   const dataArr = data;
   return (
     <BlogLayout>
-      <Header type="services" image={homepageData?.acf?.image_page_blog} />
+      <Header type="services" image={homepageData?.acf?.image_page_blog.toString().slice(41)} />
       <div className="mx-8 pt-72 text-xl text-orange-500 md:mx-48 lg:pt-72 lg:text-3xl">
         Blog de GOON
       </div>

@@ -23,14 +23,11 @@ const nextConfig = {
     appDir: true,
   },
   images: {
-    remotePatterns: [
-      {
-        protocol: 'http',
-        hostname: `${process.env.NEXT_CONFIG_HOSTNAME}`,
-        port: `${process.env.BACKEND_PORT}`,
-      },
-    ],
-  },
+    
+    domains: ['api.tcp', 'localhost'],
+  
+
+ },
 
   async headers() {
     return [

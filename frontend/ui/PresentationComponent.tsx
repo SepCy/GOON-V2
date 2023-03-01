@@ -6,6 +6,7 @@ import Bubble from '../public/images/bubble.svg';
 import Goon from '../public/images/goon.svg';
 import Button from './Button';
 import Link from 'next/link';
+import { customLoader } from '@/lib/loader';
 
 type Props = {
   data: any;
@@ -32,7 +33,8 @@ const PresentationComponent: React.FC<Props> = ({ data }) => {
         <div className="relative z-10 my-4  ml-16 lg:my-24 lg:ml-48 ">
           <span>
             <Image
-              src={data?.service_1?.image}
+              src={data?.service_1?.image.toString().slice(41)}
+              loader={customLoader}
               alt="Image 1"
               width={100}
               height={100}
@@ -47,7 +49,8 @@ const PresentationComponent: React.FC<Props> = ({ data }) => {
 
           <span>
             <Image
-              src={data?.service_2?.image}
+              src={data?.service_2?.image.toString().slice(41)}
+              loader={customLoader}
               alt="Image 2"
               width={100}
               height={100}
@@ -62,7 +65,8 @@ const PresentationComponent: React.FC<Props> = ({ data }) => {
           {/* Top right*/}
           <span>
             <Image
-              src={data?.service_3?.image}
+              src={data?.service_3?.image.toString().slice(41)}
+              loader={customLoader}
               alt="Image 3"
               width={100}
               height={100}
@@ -77,7 +81,8 @@ const PresentationComponent: React.FC<Props> = ({ data }) => {
           {/* Bottom right*/}
           <span>
             <Image
-              src={data?.service_4?.image}
+              src={data?.service_4?.image.toString().slice(41)}
+              loader={customLoader}
               alt="Image 4"
               width={100}
               height={100}

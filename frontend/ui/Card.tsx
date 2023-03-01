@@ -1,3 +1,5 @@
+"use client"
+import { customLoader } from '@/lib/loader';
 import { formatDate } from '@/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -32,10 +34,11 @@ const Card: React.FC<Props> = ({
         <div>
           {featured_media ? (
             <Image
-              src={featured_media[0].source_url}
+              src={featured_media[0].source_url.toString().slice(41)}
               alt={alt}
               width={400}
               height={100}
+              loader={customLoader}
             />
           ) : (
             ''

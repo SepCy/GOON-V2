@@ -6,6 +6,8 @@ import React, { useState } from 'react';
 import Logo from '../public/images/Logo.svg';
 import Banniere from '../public/images/homeImage.png';
 import { GrMenu } from 'react-icons/gr';
+import { customLoader } from '@/lib/loader';
+import { useRouter } from 'next/navigation';
 
 type Props = {
   type?: string;
@@ -14,6 +16,8 @@ type Props = {
 
 const Header: React.FC<Props> = ({ type, image }) => {
   const [open, setOpen] = useState(false);
+
+  const router = useRouter();
   return (
     <div
       className={
@@ -31,6 +35,7 @@ const Header: React.FC<Props> = ({ type, image }) => {
               fill
               alt="Banniere"
               className=" h-64"
+              loader={customLoader}
             />
           ) : (
             <Image
@@ -39,6 +44,7 @@ const Header: React.FC<Props> = ({ type, image }) => {
               fill
               alt="Banniere"
               className=" h-64"
+              loader={customLoader}
             />
           )}
         </div>
@@ -70,7 +76,7 @@ const Header: React.FC<Props> = ({ type, image }) => {
         <Link className="hover:text-orange-500" href="/">
           Internet
         </Link>
-        <Link className="hover:text-orange-500" href="/services">
+        <Link onClick={() => router.push('/dashboard')} className="hover:text-orange-500" href="/services">
           Services
         </Link>
         <Link className="hover:text-orange-500 lg:mr-16" href="/blog">

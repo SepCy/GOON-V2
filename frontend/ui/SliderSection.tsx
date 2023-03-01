@@ -7,6 +7,7 @@ import Boy from '../public/images/lecture.svg';
 import Img2 from '../public/images/podcast.svg';
 import Img3 from '../public/images/play.svg';
 import BackgroundImage from '../public/images/bubble.svg';
+import { customLoader } from '@/lib/loader';
 
 type Props = {
   data: any;
@@ -61,8 +62,9 @@ const SliderSection: React.FC<Props> = ({ data }) => {
           className=" w-3/5 md:w-2/4"
           alt="Boy with books"
           width={500}
-          src={data?.slider_1?.image}
+          src={data?.slider_1?.image.toString().slice(41)}
           height={600}
+          loader={customLoader}
         />
         <div className="w-2/5 pr-2 pl-2 text-orange-500 md:pl-8 md:pr-16 lg:w-2/4 lg:pr-32 lg:text-3xl">
           {data?.slider_1?.texte}
@@ -74,8 +76,9 @@ const SliderSection: React.FC<Props> = ({ data }) => {
           className="w-3/5 md:w-2/4"
           alt="Boy with books"
           width={500}
-          src={data?.slider_2?.image}
+          src={data?.slider_2?.image.toString().slice(41)}
           height={600}
+          loader={customLoader}
         />
         <div className="w-2/5 pr-2 pl-2 text-orange-500 md:pl-8 md:pr-16 lg:w-2/4 lg:pr-32 lg:text-3xl">
           {data?.slider_2?.texte}
@@ -87,7 +90,8 @@ const SliderSection: React.FC<Props> = ({ data }) => {
           className=" w-3/5 md:w-2/4"
           width={500}
           height={600}
-          src={data?.slider_3?.image}
+          src={data?.slider_3?.image.toString().slice(41)}
+          loader={customLoader}
         />
         <div className="w-2/5 pr-2 pl-2 text-orange-500 md:pl-8 md:pr-16 lg:w-2/4 lg:pr-32 lg:text-3xl">
           {data?.slider_3?.texte}

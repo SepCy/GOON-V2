@@ -1,3 +1,6 @@
+"use client"
+
+import { customLoader } from '@/lib/loader';
 import Image from 'next/image';
 import React from 'react';
 import Header from './Header';
@@ -18,6 +21,7 @@ const HeroSection: React.FC<Props> = ({ data, homeImageUrl }) => {
         alt="Home Image"
         width={1500}
         height={200}
+        loader={customLoader}
       />
       <HeroSectionText data={data} />
     </div>

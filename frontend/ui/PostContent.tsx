@@ -1,7 +1,9 @@
+"use client"
 import { formatDate } from '@/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import { customLoader } from '../lib/loader'
 import sanitizeHtml from 'sanitize-html';
 import { AiOutlineArrowLeft } from 'react-icons/ai';
 
@@ -39,10 +41,10 @@ const PostContent: React.FC<Props> = ({ data }: any) => {
         {data?._embedded['wp:featuredmedia'] ? (
           <div className="my-12 lg:my-8">
             <Image
-              src={data?._embedded['wp:featuredmedia'][0]?.source_url}
+              src={data?._embedded['wp:featuredmedia'][0]?.source_url.toString().slice(41)}
               alt={data?.title.rendered}
               width={1000}
-              height={100}
+              loader={customLoader}
             />
           </div>
         ) : (

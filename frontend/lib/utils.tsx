@@ -11,7 +11,7 @@ export const formatDate = (date: any) => {
 export async function getData() {
   const res = await fetch(
     `${process.env.BACKEND_URL}/wp-json/wp/v2/posts?_embed&order=desc&per_page=100&status=publish`,
-    { cache: 'no-store' },
+    { next: { revalidate: 10 } },
   );
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
@@ -26,7 +26,7 @@ export async function getData() {
 }
 
 export async function getPagesData(url: string) {
-  const res = await fetch(url, { cache: 'no-store' });
+  const res = await fetch(url, { next: { revalidate: 10 } });
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
 

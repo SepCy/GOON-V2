@@ -33,7 +33,7 @@ const Post = async ({ params }: any) => {
           data[0]?._embedded['wp:featuredmedia']
             ? data[0]?._embedded['wp:featuredmedia'][0]?.source_url
                 .toString()
-                .slice(27)
+                .slice(34)
             : ''
         }
       />

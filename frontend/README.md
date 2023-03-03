@@ -6,12 +6,21 @@ This playground is a mirror of the [Next.js v13 App Directory Playground](https:
 
 **As a reminder, Turbopack is currently in alpha and not yet ready for production. We appreciate your ongoing support as we work to make it ready for everyone.**
 
+
+
+## Requirements before running
+1. Install nodejs
+2. Ensure the backend server runs using the name 'http://api.goon.tcp/ (wordpress or api container)
+3. Upload the database file using all in one migration (Will be provided)
+
 ## Running Locally
 
 1. Install dependencies: `npm`
 1. Start the dev server: `npm install`
 2. Build the frontend: `npm run build`
-3. Start the frontend: `npm start`
+3. Start the frontend: `docker-compose up -d`
+
+
 
 **Note:** The playground uses [Tailwind CSS](https://tailwindcss.com) via [PostCSS](https://turbo.build/pack/docs/features/css#postcss).
 

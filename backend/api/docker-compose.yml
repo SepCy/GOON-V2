@@ -1,23 +1,24 @@
 version: "3"
 
 services:
-  mysql:
-    container_name: wordpress_mysql
-    image: mysql:5.7
+  mariadb:
+    container_name: maria
+    image: mariadb:latest
     volumes:
       - data:/var/lib/mysql/wordpress
     ports:
       - "3306:3306"
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: rootpassword
-      MYSQL_DATABASE: mywordpresssite
-    networks:
-      - internal
+      MYSQL_ROOT_PASSWORD: goon
+      MYSQL_USER: goon
+      MYSQL_DATABASE: goon
+      MYSQL_PASSWORD: goon
+
   wordpress:
     container_name: wordpress_web
     depends_on:
-      - mysql
+      - mariadb
     image: wordpress:latest
     restart: always
     ports:
@@ -31,21 +32,21 @@ services:
       - ./src/wp-content/themes/:/var/www/html/wp-content/themes/
       - ./wordpress.ini:/usr/local/etc/php/conf.d/wordpress.ini
     environment:
-      WORDPRESS_DB_HOST: mysql
-      WORDPRESS_DB_NAME: mywordpresssite
-      WORDPRESS_DB_USER: root
-      WORDPRESS_DB_PASSWORD: rootpassword
+      WORDPRESS_DB_HOST: mariadb
+      WORDPRESS_DB_NAME: goon
+      WORDPRESS_DB_USER: goon
+      WORDPRESS_DB_PASSWORD: goon
       WORDPRESS_DB_PORT: 3306
     # labels:
     #   - "traefik.enable=true"
     #   - "traefik.http.routers.api.rule=Host(`goon.tcp`)"
     #   - "traefik.http.routers.api.entrypoints=web"
-    networks:
-      - internal
-      - web
+    adminer:
+      image: adminer
+      container_name: api-adminer
+      restart: always
+      links:
+        - mariadb
+
 volumes:
   data:
-networks:
-  internal:
-  web:
-    external: true

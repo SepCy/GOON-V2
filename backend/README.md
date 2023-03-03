@@ -19,7 +19,7 @@ Here is an example :
 
 ```mermaid
 graph LR
-A[User Request 'http://goon.tcp'] -- Url Handler --> B[Nginx Proxy Manager]
+A[User Request 'http://goon.localhost'] -- Url Handler --> B[Nginx Proxy Manager]
 B --> D{docker.goon.service}
 E[User Request '/Poadcast'] --> B
 B --> F{docker.azuracast.service}

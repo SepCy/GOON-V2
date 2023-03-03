@@ -67,7 +67,7 @@ or the hosts you provide in the Nginx proxy manager.
 
 ```mermaid
 graph LR
-A[User Request 'http://goon.tcp'] -- Url Handler --> B[Nginx Proxy Manager]
+A[User Request 'http://goon.localhost'] -- Url Handler --> B[Nginx Proxy Manager]
 B --> D[docker.goon.service]
 B --> F[docker.azuracast.service]
 B --> C[docker.wikipedia.service]

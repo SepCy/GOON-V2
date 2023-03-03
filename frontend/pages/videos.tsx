@@ -22,7 +22,7 @@ export default function Page() {
 
       <iframe
         src={`http://api.goon.tcp/pgc_simply_gallery/206/`}
-        className="scrollbar-hide bottom-0 left-0 right-0 mx-4 w-full overflow-x-hidden px-4 pt-64 sm:mx-0 sm:px-16"
+        className="scrollbar-hide bottom-0 left-0 right-0 mx-4 my-2 w-full overflow-x-hidden pr-4 pt-64 sm:mx-0 sm:px-16"
         height={2000}
       />
 

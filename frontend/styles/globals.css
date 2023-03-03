@@ -21,7 +21,7 @@ body {
 }
 
 .pgc-rev-slider-page-view {
-  top: -200px;
+  top: -400px !important;
 }
 /* For IE, Edge and Firefox */
 .scrollbar-hide {

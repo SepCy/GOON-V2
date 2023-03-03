@@ -1,9 +1,11 @@
 # Welcome to GOON!
 
-<p  align="center">
+<p align="center">
 <img  src="https://avatars.githubusercontent.com/u/116578301?s=200&v=4"  width="100"  alt="Goon"  /></p>
-Hi! 
-This is your starting place to build GOON on your own server and join our GOON Community
+
+Hi! Thank you for joinging GOON Community.
+
+The starting place to build GOON on your own server and join our GOON Community
 
 An open-source platform designed to bridge the digital divide between rural and urban communities in Cameroon by providing offline digital services to community members.
 

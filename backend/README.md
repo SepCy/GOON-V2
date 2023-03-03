@@ -14,7 +14,7 @@ An open-source platform designed to bridge the digital divide between rural and 
 ### Navigate into the project folder
 
 You need first to open the **Nginx folder**
-this service is the starting point for our application, his job is to do to the reverse proxy for any request comming from the user side.
+this service is the starting point for our application, doing the reverse proxy for any request comming from the user side.
 Here is an example :
 
 ```mermaid

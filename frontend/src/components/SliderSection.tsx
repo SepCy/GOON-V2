@@ -19,27 +19,27 @@ const SliderSection: React.FC<Props> = ({ data }) => {
         let timeout: ReturnType<typeof setTimeout>;
         let mouseOver = false;
         function clearNextTimeout() {
-          clearTimeout(timeout);
+          //clearTimeout(timeout);
         }
         function nextTimeout() {
-          clearTimeout(timeout);
-          if (mouseOver) return;
+          // clearTimeout(timeout);
+
           timeout = setTimeout(() => {
             slider.next();
-          }, 4000);
+          }, 3000);
         }
         slider.on('created', () => {
           slider.container.addEventListener('mouseover', () => {
-            mouseOver = false;
+            mouseOver = true;
             clearNextTimeout();
           });
           slider.container.addEventListener('mouseout', () => {
-            mouseOver = false;
+            mouseOver = true;
             nextTimeout();
           });
           nextTimeout();
         });
-        slider.on('animationEnded', nextTimeout);
+        slider.on('dragStarted', nextTimeout);
         slider.on('animationEnded', nextTimeout);
         slider.on('dragStarted', nextTimeout);
       },

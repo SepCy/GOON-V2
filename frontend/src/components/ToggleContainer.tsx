@@ -20,7 +20,7 @@ const ToggleContainer: React.FC<Props> = ({ iframeUrl, iconSrc }) => {
         }
       >
         <iframe
-          className="sm:y-2 z-50 mt-24 mb-2 h-64 w-64 sm:w-fit "
+          className="sm:y-2 z-50 mt-32 mb-2 h-64 w-64 sm:w-fit "
           src={iframeUrl}
           allow="autoplay;"
           height={430}

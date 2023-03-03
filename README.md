@@ -42,7 +42,7 @@ cd backend
 
 follow the step define in the Readme, when all the container are running and the proxy hosts are sets, move to the frontend folder.
 
-### start the container.
+### move to the frontend folder.
 
 ```bash
 cd frontend

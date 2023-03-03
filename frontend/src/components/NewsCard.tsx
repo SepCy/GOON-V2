@@ -1,8 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
-import Local from '../public/images/Tag.svg';
-import Radio from '../public/images/Radio.png';
-import Link from 'next/link';
+import Local from '../../public/images/Tag.svg';
+import Radio from '../../public/images/Radio.png';
 
 type Props = {
   tag: string;

@@ -1,18 +1,18 @@
 import React from 'react';
 import ServiceCard from './ServiceCard';
-import Kolibri from '../public/images/kolibri.svg';
-import Kiwix from '../public/images/kiwix.png';
-import Ludo from '../public/images/ludo.png';
-import RocketChat from '../public/images/rocketchat.png';
-import Scratch from '../public/images/scratch.png';
-import Radio from '../public/images/Radio.png';
-import Video from '../public/images/video.png';
+import Kolibri from '../../public/images/kolibri.svg';
+import Kiwix from '../../public/images/kiwix.png';
+import Ludo from '../../public/images/ludo.png';
+import RocketChat from '../../public/images/rocketchat.png';
+import Scratch from '../../public/images/scratch.png';
+import Radio from '../../public/images/Radio.png';
+import Video from '../../public/images/video.png';
 
 export const SecondServicesSection = () => {
   return (
     <div className="z-10 mx-8 my-24 md:mx-24">
       <div className="ml-0 mb-8 w-full pb-4 text-xl text-orange-500 lg:ml-8 lg:w-2/4 lg:text-3xl">
-        Accédez à tous les services de GOON sans internet
+        <p>Accédez à tous les services de GOON sans internet</p>
       </div>
       <div className="flex flex-wrap justify-center">
         <ServiceCard

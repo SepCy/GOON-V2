@@ -1,3 +1,4 @@
+'use client';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -14,11 +15,11 @@ const ServiceCard: React.FC<Props> = ({ title, link, icon, description }) => {
   return (
     <Link
       className=" mr-4 flex flex-col items-center p-4 lg:mr-4 lg:flex lg:flex-col lg:items-center lg:p-4"
-      href={link}
+      href={link ? `${link}` : ''}
     >
       <div className="my-2 flex lg:my-2 lg:flex">
         <Image
-          className="h-24 w-24 rounded-full bg-orange-200 p-2 lg:h-24 lg:w-24"
+          className="h-16 w-16 rounded-full bg-orange-200 p-2 lg:h-24 lg:w-24"
           src={icon}
           alt="Icon"
         />
@@ -27,7 +28,7 @@ const ServiceCard: React.FC<Props> = ({ title, link, icon, description }) => {
           <div className="my-2 font-medium text-orange-500 lg:font-medium">
             {title}
           </div>
-          <div>{description}</div>
+          <div className="">{description}</div>
           <BsArrowRight className="mt-4 text-3xl text-orange-500 transition duration-300 hover:translate-x-4 hover:transition hover:duration-300" />
         </div>
       </div>

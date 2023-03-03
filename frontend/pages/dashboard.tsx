@@ -1,13 +1,13 @@
-import DashboardService from '@/ui/DashboardService';
+import DashboardService from 'src/components/DashboardService';
 import React from 'react';
-import Goon from '../../public/images/goon.svg';
-import Kolibri from '../../public/images/kolibri.svg';
-import RocketChat from '../../public/images/rocketchat.png';
-import Radio from '../../public/images/Radio.png';
-import Logo from '../../public/images/Logo.svg';
-import Bubble from '../../public/images/bubble.svg';
+import Goon from '../public/images/goon.svg';
+import Kolibri from '../public/images/kolibri.svg';
+import RocketChat from '../public/images/rocketchat.png';
+import Radio from '../public/images/Radio.png';
+import Logo from '../public/images/Logo.svg';
+import Bubble from '../public/images/bubble.svg';
 import Image from 'next/image';
-import Footer from '@/ui/Footer';
+import Footer from 'src/components/Footer';
 
 const Dashboard = () => {
   return (

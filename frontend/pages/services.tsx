@@ -1,22 +1,28 @@
 import Header from '@/ui/Header';
-import React from 'react';
-import ServicesLayout from './layout';
+import React, { useEffect, useState } from 'react';
 import Footer from '@/ui/Footer';
 import { SecondServicesSection } from '@/ui/SecondServicesSection';
 import BgParticles from '@/ui/BgParticles';
 import { getPagesData } from '@/lib/utils';
-import { useRouter } from 'next/navigation';
 
-const Services = async () => {
-  const homepageData = await getPagesData(
-    `${process.env.BACKEND_URL}/wp-json/wp/v2/pages/164?acf_format=standard`,
-  );
+const Services = () => {
+  const [homepageData, setHomepageData]: any = useState([]);
+
+  useEffect(() => {
+    async function fetch() {
+      const homepageData = await getPagesData(
+        `http://api.goon.tcp/wp-json/wp/v2/pages/164?acf_format=standard`,
+      );
+      setHomepageData(homepageData);
+    }
+    fetch();
+  }, []);
 
   return (
-    <ServicesLayout>
+    <div>
       <Header
         type="services"
-        image={homepageData?.acf?.image_page_services.toString().slice(34)}
+        image={homepageData?.acf?.image_page_services.toString().slice(39)}
       />
       <BgParticles />
       <div className="z-10 pt-64">
@@ -25,7 +31,7 @@ const Services = async () => {
         </div>
       </div>
       <Footer />
-    </ServicesLayout>
+    </div>
   );
 };
 

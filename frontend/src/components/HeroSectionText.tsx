@@ -16,9 +16,9 @@ const HeroSectionText: React.FC<Props> = ({ data }) => {
         <div className="w-min bg-red-600 py-2 px-2 lg:w-min lg:py-2 lg:px-3">
           Actualité
         </div>
-        <Link href={`/blog/${data.slug}`}>
+        <Link href={`/blog/${data?.slug}`}>
           <div
-            dangerouslySetInnerHTML={{ __html: data.excerpt.rendered }}
+            dangerouslySetInnerHTML={{ __html: data?.excerpt.rendered }}
             className="py-4 text-normal md:text-xl lg:w-full lg:py-4 lg:text-3xl lg:font-bold"
           ></div>
         </Link>
@@ -28,7 +28,9 @@ const HeroSectionText: React.FC<Props> = ({ data }) => {
             <span>
               <AiOutlineUser />
             </span>
-            <div className="ml-2 lg:ml-2">{data._embedded?.author[0].name}</div>
+            <div className="ml-2 lg:ml-2">
+              {data?._embedded?.author[0].name}
+            </div>
           </div>
 
           <div className="ml-8 flex items-center lg:ml-12 lg:flex lg:items-center">

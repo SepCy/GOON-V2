@@ -1,6 +1,6 @@
 import React from 'react';
 import ToggleContainer from './ToggleContainer';
-import RadioIcon from '../public/images/Radio.png';
+import RadioIcon from '../../public/images/Radio.png';
 
 const PodCast = () => {
   return (

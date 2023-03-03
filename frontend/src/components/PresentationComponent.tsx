@@ -2,8 +2,8 @@
 
 import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
-import Bubble from '../public/images/bubble.svg';
-import Goon from '../public/images/goon.svg';
+import Bubble from '../../public/images/bubble.svg';
+import Goon from '../../public/images/goon.svg';
 import Button from './Button';
 import Link from 'next/link';
 import { customLoader } from '@/lib/loader';
@@ -33,7 +33,7 @@ const PresentationComponent: React.FC<Props> = ({ data }) => {
         <div className="relative z-10 my-4  ml-16 lg:my-24 lg:ml-48 ">
           <span>
             <Image
-              src={data?.service_1?.image.toString().slice(34)}
+              src={data?.service_1?.image.toString().slice(39)}
               loader={customLoader}
               alt="Image 1"
               width={100}
@@ -49,7 +49,7 @@ const PresentationComponent: React.FC<Props> = ({ data }) => {
 
           <span>
             <Image
-              src={data?.service_2?.image.toString().slice(34)}
+              src={data?.service_2?.image.toString().slice(39)}
               loader={customLoader}
               alt="Image 2"
               width={100}
@@ -57,15 +57,15 @@ const PresentationComponent: React.FC<Props> = ({ data }) => {
               onClick={() => setState(2)}
               className={
                 state === 2
-                  ? ` absolute bottom-8 -left-8 w-16 scale-150 cursor-pointer rounded-full border border-solid border-white bg-orange-100 shadow-md transition duration-200 ease-in-out  hover:scale-150 sm:w-32 `
-                  : `absolute bottom-8 -left-8 w-16 scale-125 animate-wiggle cursor-pointer rounded-full border   border-solid border-white bg-orange-100 transition duration-200 hover:scale-150 sm:w-32`
+                  ? ` absolute bottom-8 -left-8 w-24 scale-150 cursor-pointer rounded-full border border-solid border-white bg-orange-100 shadow-md transition duration-200 ease-in-out  hover:scale-150 sm:w-32 `
+                  : `absolute bottom-8 -left-8 w-24 scale-125 animate-wiggle cursor-pointer rounded-full border   border-solid border-white bg-orange-100 transition duration-200 hover:scale-150 sm:w-32`
               }
             />
           </span>
           {/* Top right*/}
           <span>
             <Image
-              src={data?.service_3?.image.toString().slice(34)}
+              src={data?.service_3?.image.toString().slice(39)}
               loader={customLoader}
               alt="Image 3"
               width={100}
@@ -81,7 +81,7 @@ const PresentationComponent: React.FC<Props> = ({ data }) => {
           {/* Bottom right*/}
           <span>
             <Image
-              src={data?.service_4?.image.toString().slice(34)}
+              src={data?.service_4?.image.toString().slice(39)}
               loader={customLoader}
               alt="Image 4"
               width={100}
@@ -109,7 +109,7 @@ const PresentationComponent: React.FC<Props> = ({ data }) => {
           <p className=" my-4 md:my-8">{data?.service_1?.description}</p>
 
           <div>
-            <Link href={data?.service_1?.lien_url}>
+            <Link href={data ? data?.service_1?.lien_url : ''}>
               <Button kind="default">Suivre</Button>
             </Link>
           </div>

@@ -11,7 +11,7 @@ const ToggleContainer: React.FC<Props> = ({ iframeUrl, iconSrc }) => {
   const [click, setOnclick] = useState(true);
 
   return (
-    <div className={click ? `mr-2 w-32 ` : `mr-2  `}>
+    <div className={click ? `mr-2 h-32 w-16 sm:w-32 ` : `mr-2  `}>
       <div
         className={
           click
@@ -20,7 +20,7 @@ const ToggleContainer: React.FC<Props> = ({ iframeUrl, iconSrc }) => {
         }
       >
         <iframe
-          className=" my-2 w-fit "
+          className="sm:y-2 z-50 mt-24 mb-2 h-64 w-64 sm:w-fit "
           src={iframeUrl}
           allow="autoplay;"
           height={430}

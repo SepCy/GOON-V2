@@ -27,14 +27,14 @@ const Card: React.FC<Props> = ({
   featured_media,
 }) => {
   let newDate = new Date(date.toString());
-  let datePost = newDate.toDateString();
+
   return (
     <div className="relative mt-8 w-72 cursor-pointer rounded-md border bg-white p-6 transition duration-200  hover:-translate-y-1 hover:transition hover:duration-200 lg:mt-8 lg:w-64 lg:p-6 ">
-      <Link href={`/blog/${slug}`}>
+      <Link href={{ pathname: '/blog/[slug]', query: { slug: slug } }}>
         <div>
           {featured_media ? (
             <Image
-              src={featured_media[0].source_url.toString().slice(34)}
+              src={featured_media[0].source_url.toString().slice(39)}
               alt={alt}
               width={400}
               height={100}

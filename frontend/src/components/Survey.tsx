@@ -1,6 +1,6 @@
 import React from 'react';
 import ToggleContainer from './ToggleContainer';
-import Stylo from '../public/images/writing.png';
+import Stylo from '../../public/images/writing.png';
 
 const Survey = () => {
   return (

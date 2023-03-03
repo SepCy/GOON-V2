@@ -1,10 +1,8 @@
-'use client';
-
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
-import Logo from '../public/images/Logo.svg';
-import Banniere from '../public/images/homeImage.png';
+import Logo from '../../public/images/Logo.svg';
+import Banniere from '../../public/images/homeImage.png';
 import { GrMenu } from 'react-icons/gr';
 import { customLoader } from '@/lib/loader';
 import { useRouter } from 'next/navigation';
@@ -44,7 +42,6 @@ const Header: React.FC<Props> = ({ type, image }) => {
               fill
               alt="Banniere"
               className=" h-64"
-              loader={customLoader}
             />
           )}
         </div>
@@ -52,7 +49,7 @@ const Header: React.FC<Props> = ({ type, image }) => {
         ''
       )}
 
-      <Link className="z-100 lg:z-10" href="/">
+      <Link className="z-50 lg:z-10" href="/">
         <Image height={150} width={150} src={Logo} alt="Logo" />
       </Link>
       <GrMenu
@@ -76,7 +73,7 @@ const Header: React.FC<Props> = ({ type, image }) => {
         <Link className="hover:text-orange-500" href="/">
           Internet
         </Link>
-        <Link onClick={() => router.push('/dashboard')} className="hover:text-orange-500" href="/services">
+        <Link className="hover:text-orange-500" href="/services">
           Services
         </Link>
         <Link className="hover:text-orange-500 lg:mr-16" href="/blog">

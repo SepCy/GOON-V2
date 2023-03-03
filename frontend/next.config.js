@@ -20,14 +20,11 @@ const nextConfig = {
   reactStrictMode: true, // Recommended for the `pages` directory, default in `app`.
   experimental: {
     // Required:
-    appDir: true,
+    appDir: false,
   },
   images: {
-    
-    domains: ['api.tcp', 'localhost'],
-  
-
- },
+    domains: ['api.goon.tcp'],
+  },
 
   async headers() {
     return [

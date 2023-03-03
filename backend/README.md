@@ -46,7 +46,7 @@ docker-compose up -d
 And then open your browser to : http://localhost:81/
 default credential for login in are :
 
-> email address: admin@example.com
+> email address: admin@example.com </br>
 > password: changeme
 
 Then you can change the default credential to insert your own.

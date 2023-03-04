@@ -8,6 +8,13 @@ import Logo from '../public/images/Logo.svg';
 import Bubble from '../public/images/bubble.svg';
 import Image from 'next/image';
 import Footer from 'src/components/Footer';
+import {
+  AZURECAST_ADMIN,
+  GOON_ADMIN,
+  KOLIBRI_ADMIN,
+  KOLIBRI_LINK,
+  ROCKETCHAT_ADMIN,
+} from '@/lib/url';
 
 const Dashboard = () => {
   return (
@@ -29,24 +36,24 @@ const Dashboard = () => {
 
         <div className="z-10 mx-2 mt-12 flex justify-between">
           <DashboardService
-            link={`${process.env.GOON_ADMIN}`}
+            link={GOON_ADMIN}
             logo={Goon}
             title="Admin Principal (Blog, Vidéos et Survey)"
           />
           <DashboardService
-            link={`${process.env.AZURECAST_ADMIN}`}
+            link={AZURECAST_ADMIN}
             logo={Radio}
             title="Admin Radio"
           />
 
           <DashboardService
-            link={`${process.env.KOLIBRI_ADMIN}`}
+            link={KOLIBRI_ADMIN}
             logo={Kolibri}
             title="Admin Kolibri"
           />
 
           <DashboardService
-            link={`${process.env.ROCKETCHAT_ADMIN}`}
+            link={ROCKETCHAT_ADMIN}
             logo={RocketChat}
             title="Admin Messagerie"
           />

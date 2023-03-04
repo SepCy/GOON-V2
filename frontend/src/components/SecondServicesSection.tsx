@@ -7,6 +7,15 @@ import RocketChat from '../../public/images/rocketchat.png';
 import Scratch from '../../public/images/scratch.png';
 import Radio from '../../public/images/Radio.png';
 import Video from '../../public/images/video.png';
+import {
+  KIWIX_LINK,
+  KOLIBRI_LINK,
+  LUDO_LINK,
+  RADIO_LINK,
+  ROCKETCHAT_LINK,
+  SCRATCH_LINK,
+  VIDEOS_LINK,
+} from '@/lib/url';
 
 export const SecondServicesSection = () => {
   return (
@@ -18,48 +27,48 @@ export const SecondServicesSection = () => {
         <ServiceCard
           title="KOLIBRI"
           description="Accedez à des milliers de contenus éducatifs gratuitement et sans internet"
-          link={`${process.env.KOLIBRI_LINK}`}
+          link={KOLIBRI_LINK}
           icon={Kolibri}
         />
         <ServiceCard
           title="KIWIX"
           description="Accedez à des milliers de contenus éducatifs gratuitement et sans internet"
-          link={`${process.env.KIWIX_LINK}`}
+          link={KIWIX_LINK}
           icon={Kiwix}
         />
 
         <ServiceCard
           title="LUDO"
           description="Divertissez vous avec le jeu Ludo, vous pouvez jouer seuls ou en réseau"
-          link={`${process.env.LUDO_LINK}`}
+          link={LUDO_LINK}
           icon={Ludo}
         />
 
         <ServiceCard
           title="MESSAGERIE ou SMS"
           description="Echangez des messages, fichiers et mêmes des messages vocaux grâce à ce service"
-          link={`${process.env.ROCKETCHAT_LINK}`}
+          link={ROCKETCHAT_LINK}
           icon={RocketChat}
         />
 
         <ServiceCard
           title="RADIO"
           description="Ecouter la radio pour être informé des différentes informations de votre communauté"
-          link={`${process.env.RADIO_LINK}`}
+          link={RADIO_LINK}
           icon={Radio}
         />
 
         <ServiceCard
           title="SCRATCH"
           description="Apprenez la programmation informatique grâce au langage scratch hors ligne"
-          link={`${process.env.SCRATCH_LINK}`}
+          link={SCRATCH_LINK}
           icon={Scratch}
         />
 
         <ServiceCard
           title="VIDEOS"
           description="Accedez à des milliers de contenus vidéos informatives gratuitement et sans internet"
-          link={`${process.env.VIDEOS_LINK}`}
+          link={VIDEOS_LINK}
           icon={Video}
         />
       </div>

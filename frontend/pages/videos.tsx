@@ -27,7 +27,6 @@ export default function Page() {
         allowFullScreen
         src={`http://api.goon.tcp/pgc_simply_gallery/206/`}
         className="absolute bottom-0 left-0 right-0 mx-4 my-2 mt-64 block w-full overflow-x-hidden pr-4 sm:mx-0 sm:h-screen sm:px-16"
-        height={2000}
       />
 
       <Footer />

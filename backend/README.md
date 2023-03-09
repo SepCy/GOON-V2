@@ -67,6 +67,15 @@ docker-compose up -d
 And go to Nginx proxy manger to add the proxy hosts for the api service.
 **And move to the next service by repeating the same step.**
 
+- goon.tcp --> 3002
+- api.goon.tcp --> 9080
+- kolibri.goon.tcp --> 3001
+- wikipedia.goon.tcp --> 3003
+- poadcast.goon.tcp --> 8009
+- coding.goon.tcp --> 3006
+- ludo.goon.tcp --> ?
+- message.goon.tcp --> 3000
+
 ## Services
 
 run the docker ps command know the port used by a service and add it to the proxy hosts of nginx proxy manager

@@ -5,7 +5,7 @@ services:
     container_name: "ludo"
     restart: always
     ports:
-      - 3002:3000
+      - 3009:3000
     # labels:
     #   - "traefik.enable=true"
     #   - "traefik.http.routers.ludo.rule=Host(`ludo.goon.tcp`)"

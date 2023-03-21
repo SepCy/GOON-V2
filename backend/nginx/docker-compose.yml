@@ -1,13 +1,13 @@
 version: "3"
 services:
   nginx:
-    image: 'jc21/nginx-proxy-manager:latest'
+    image: "jc21/nginx-proxy-manager:latest"
     restart: unless-stopped
     ports:
       # These ports are in format <host-port>:<container-port>
-      - '80:80' # Public HTTP Port
+      - "80:80" # Public HTTP Port
       # - '443:443' # Public HTTPS Port
-      - '81:81' # Admin Web Port
+      - "81:81" # Admin Web Port
       # Add any other Stream port you want to expose
       # - '21:21' # FTP
     environment:
@@ -23,14 +23,21 @@ services:
       - ./letsencrypt:/etc/letsencrypt
     depends_on:
       - db
+    networks:
+      - web
 
   db:
-    image: 'jc21/mariadb-aria:latest'
+    image: "jc21/mariadb-aria:latest"
     restart: unless-stopped
     environment:
-      MYSQL_ROOT_PASSWORD: 'npm'
-      MYSQL_DATABASE: 'npm'
-      MYSQL_USER: 'npm'
-      MYSQL_PASSWORD: 'npm'
+      MYSQL_ROOT_PASSWORD: "npm"
+      MYSQL_DATABASE: "npm"
+      MYSQL_USER: "npm"
+      MYSQL_PASSWORD: "npm"
     volumes:
       - ./data/mysql:/var/lib/mysql
+    networks:
+      - web
+networks:
+  web:
+    external: true

@@ -1,3 +1,5 @@
 ./api/src/
 /api/src/
 api/src/
+./nginx/data
+./nginx/letsencrypt

@@ -7,7 +7,7 @@ services:
     volumes:
       - .:/app
     command: npm run start
-    restart: unless-start
+    restart: unless-stopped
     ports:
       - '3002:3002'
     environment:

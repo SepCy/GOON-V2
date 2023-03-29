@@ -1,0 +1,32 @@
+version: "3"
+services:
+  mongo:
+    restart: unless-stopped
+    image: mongo:4.2
+    volumes:
+      - /home/data/chat/mongodb/data:/data/db
+      - /home/data/chat/backups/mongodb:/backups
+    command: mongod --oplogSize 128 --replSet rs0
+  # this container's job is just run the command to initialize the replica set.
+  # it will run the command and remove himself (it will not stay running)
+  mongo-init-replica:
+    image: mongo:4.2
+    command: 'bash -c "for i in `seq 1 30`; do mongo mongo/rocketchat --eval \"rs.initiate({ _id: ''rs0'', members: [ { _id: 0, host: ''localhost:27017'' } ]})\" && s=$$? && break || s=$$?; echo \"Tried $$i times. Waiting 5 secs...\"; sleep 5; done; (exit $$s)"'
+    depends_on:
+      - mongo
+  rocketchat:
+    restart: unless-stopped
+    image: rocketchat/rocket.chat:4.5.0
+    command: bash -c 'for i in `seq 1 30`; do node main.js && s=$$? && break || s=$$?; echo "Tried $$i times. Waiting 5 secs..."; sleep 5; done; (exit $$s)'
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongo
+    environment:
+      - MONGO_URL=mongodb://mongo/rocket
+      - MONGO_OPLOG_URL=mongodb://mongo/local
+      - ROOT_URL=http://message.goon.tcp
+      # the SMTP port is likely to be 587 or 465, and instead of smtp:// you might need to use smtps:// (note the 's' for secure).
+      #- MAIL_URL=smtp://[smtp username]:[smtp password]@[smtp servername]:[smtp port]/
+    volumes:
+      - /home/data/data/uploads:/app/uploads

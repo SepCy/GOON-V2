@@ -11,7 +11,8 @@ services:
     #   - "com.centurylinklabs.watchtower.scope=sratch"
     ports:
       - "3006:80"
-
+    networks:
+      - web
 
 networks:
   web:

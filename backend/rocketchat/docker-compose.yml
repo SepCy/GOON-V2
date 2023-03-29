@@ -5,10 +5,10 @@ services:
     image: "registry.rocket.chat/rocketchat/rocket.chat:${RELEASE:-latest}"
     container_name: "rocketchat"
     restart: always
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.rocketchat.rule=Host(`rocketchat.localhost`)"
-      - "traefik.http.routers.rocketchat.entrypoints=web"
+    # labels:
+    #   - "traefik.enable=true"
+    #   - "traefik.http.routers.rocketchat.rule=Host(`rocketchat.localhost`)"
+    #   - "traefik.http.routers.rocketchat.entrypoints=web"
     environment:
       MONGO_URL: "${MONGO_URL:-\
         mongodb://${MONGODB_ADVERTISED_HOSTNAME:-mongodb}:${MONGODB_INITIAL_PRIMARY_PORT_NUMBER:-27017}/\
@@ -28,7 +28,6 @@ services:
       - "${BIND_IP:-0.0.0.0}:${HOST_PORT:-3000}:${PORT:-3000}"
     networks:
       - web
-      - internal
 
   mongodb:
     image: docker.io/bitnami/mongodb:${MONGODB_VERSION:-4.4}
@@ -37,11 +36,11 @@ services:
     volumes:
       - mongodb_data:/bitnami/mongodb
     networks:
-      - internal
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.rockmongodbetchat.rule=Host(`dbr.localhost`)"
-      - "traefik.http.routers.mongodb.entrypoints=web"
+      - web
+    # labels:
+    #   - "traefik.enable=true"
+    #   - "traefik.http.routers.rockmongodbetchat.rule=Host(`dbr.localhost`)"
+    #   - "traefik.http.routers.mongodb.entrypoints=web"
     environment:
       MONGODB_REPLICA_SET_MODE: primary
       MONGODB_REPLICA_SET_NAME: ${MONGODB_REPLICA_SET_NAME:-rs0}
@@ -55,8 +54,6 @@ services:
 volumes:
   mongodb_data: { driver: local }
 
-
 networks:
-  internal:
   web:
     external: true

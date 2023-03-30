@@ -1,7 +1,7 @@
 version: "3"
 services:
   mongo:
-    restart: unless-stopped
+    restart: always
     image: mongo:4.2
     volumes:
       - /home/data/chat/mongodb/data:/data/db
@@ -15,7 +15,7 @@ services:
     depends_on:
       - mongo
   rocketchat:
-    restart: unless-stopped
+    restart: always
     image: rocketchat/rocket.chat:4.5.0
     command: bash -c 'for i in `seq 1 30`; do node main.js && s=$$? && break || s=$$?; echo "Tried $$i times. Waiting 5 secs..."; sleep 5; done; (exit $$s)'
     ports:

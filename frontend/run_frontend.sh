@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-cd /chemin_vers_le_dossier_frontend/
+cd /relative_path_to_the_frontend_folder/
 # stopper le container au cas ou il est fonctionnel en back
 docker-compose stop
 sleep 1m

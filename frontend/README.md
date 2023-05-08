@@ -19,6 +19,11 @@ This playground is a mirror of the [Next.js v13 App Directory Playground](https:
 1. Start the dev server: `npm install`
 2. Build the frontend: `npm run build`
 3. Start the frontend: `docker-compose up -d`
+4. Open and Edit the run.sh file and add the path to the frontend folder
+5. Then add the command in the crontab environment
+5. `crontab -e`
+6. copy and past this command 
+7. `@reboot /relative_path_to_the_frontend_folder/run_frontend.sh`
 
 
 

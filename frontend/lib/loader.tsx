@@ -1,5 +1,7 @@
+import { BACKEND_URL } from './url';
+
 export const customLoader = ({ src, width, quality }: any) => {
-  return `http://api.goon.tcp/wp-content/uploads/${src}?w=${width}&q=${
+  return `${BACKEND_URL}/wp-content/uploads/${src}?w=${width}&q=${
     quality || 75
   }`;
 };

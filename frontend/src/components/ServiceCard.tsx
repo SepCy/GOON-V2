@@ -14,8 +14,9 @@ type Props = {
 const ServiceCard: React.FC<Props> = ({ title, link, icon, description }) => {
   return (
     <Link
-      className=" mr-4 flex flex-col items-center p-4 lg:mr-4 lg:flex lg:flex-col lg:items-center lg:p-4"
+      className="mr-4 mt-4 flex flex-col items-center rounded-md border border-orange-200 p-4 hover:rounded-md hover:bg-orange-100 hover:shadow-lg  lg:mr-4 lg:flex lg:flex-col lg:items-center lg:p-4"
       href={link ? `${link}` : ''}
+      target="_blank"
     >
       <div className="my-2 flex lg:my-2 lg:flex">
         <Image

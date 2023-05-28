@@ -109,8 +109,8 @@ const PresentationComponent: React.FC<Props> = ({ data }) => {
           <p className=" my-4 md:my-8">{data?.service_1?.description}</p>
 
           <div>
-            <Link href={data ? data?.service_1?.lien_url : ''}>
-              <Button kind="default">Suivre</Button>
+            <Link href={data ? data?.service_1?.lien_url : ''} target="_blank">
+              <Button kind="default">Ecouter la radio</Button>
             </Link>
           </div>
         </div>
@@ -124,7 +124,7 @@ const PresentationComponent: React.FC<Props> = ({ data }) => {
 
           <div>
             <Link href={data?.service_2?.lien_url}>
-              <Button kind="default">J'apprends'</Button>
+              <Button kind="default">Apprendre des cours</Button>
             </Link>
           </div>
         </div>
@@ -137,7 +137,7 @@ const PresentationComponent: React.FC<Props> = ({ data }) => {
           <p className=" my-4 lg:my-8">{data?.service_3?.description}</p>
 
           <Link href={data?.service_3?.lien_url}>
-            <Button kind="default">Je m'informe</Button>
+            <Button kind="default">Actualités</Button>
           </Link>
         </div>
       ) : (

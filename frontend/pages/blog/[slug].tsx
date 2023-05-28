@@ -4,10 +4,11 @@ import PostContent from 'src/components/PostContent';
 import { useRouter } from 'next/router';
 
 import React, { useEffect, useState } from 'react';
+import { BACKEND_URL } from '@/lib/url';
 
 async function getData(slug: any) {
   const res = await fetch(
-    `http://api.goon.tcp/wp-json/wp/v2/posts?_embed&slug=${slug}`,
+    `${BACKEND_URL}/wp-json/wp/v2/posts?_embed&slug=${slug}`,
     { next: { revalidate: 10 } },
   );
   // The return value is *not* serialized

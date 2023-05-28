@@ -1,3 +1,5 @@
+import { BACKEND_URL } from './url';
+
 export const formatDate = (date: any) => {
   return (
     (date.getMonth() > 8 ? date.getMonth() + 1 : '0' + (date.getMonth() + 1)) +
@@ -10,7 +12,7 @@ export const formatDate = (date: any) => {
 
 export async function getData() {
   const res = await fetch(
-    `http://api.goon.tcp/wp-json/wp/v2/posts?_embed&order=desc&per_page=100&status=publish`,
+    `${BACKEND_URL}/wp-json/wp/v2/posts?_embed&order=desc&per_page=100&status=publish`,
     { next: { revalidate: 10 } },
   );
   // The return value is *not* serialized

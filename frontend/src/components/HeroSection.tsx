@@ -1,10 +1,11 @@
-"use client"
+'use client';
 
 import { customLoader } from '@/lib/loader';
 import Image from 'next/image';
 import React from 'react';
 import Header from './Header';
 import HeroSectionText from './HeroSectionText';
+import InternetForm from './InternetForm';
 
 type Props = {
   data: any;
@@ -13,14 +14,15 @@ type Props = {
 
 const HeroSection: React.FC<Props> = ({ data, homeImageUrl }) => {
   return (
-    <div className=" lg:relative lg:left-0 lg:top-0 lg:h-fit  lg:w-full lg:bg-cover">
+    <div className=" w-full lg:relative lg:left-0 lg:top-0 lg:h-2/4  lg:w-full lg:bg-cover">
       <Header type="none" />
       <Image
-        className="left-0 top-0 z-0 h-96 w-full md:h-2/3 "
+        className="hero relative left-0 top-0 z-0  w-full "
         src={homeImageUrl}
+        style={{ objectFit: 'cover' }}
         alt="Home Image"
         width={1500}
-        height={200}
+        height={500}
         loader={customLoader}
       />
       <HeroSectionText data={data} />

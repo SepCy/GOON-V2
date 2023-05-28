@@ -4,15 +4,14 @@ import Footer from '@/ui/Footer';
 import { SecondServicesSection } from '@/ui/SecondServicesSection';
 import BgParticles from '@/ui/BgParticles';
 import { getPagesData } from '@/lib/utils';
+import { URL_PAGE } from '@/lib/url';
 
 const Services = () => {
   const [homepageData, setHomepageData]: any = useState([]);
 
   useEffect(() => {
     async function fetch() {
-      const homepageData = await getPagesData(
-        `http://api.goon.tcp/wp-json/wp/v2/pages/164?acf_format=standard`,
-      );
+      const homepageData = await getPagesData(URL_PAGE);
       setHomepageData(homepageData);
     }
     fetch();

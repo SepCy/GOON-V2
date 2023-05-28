@@ -1,6 +1,6 @@
 import React from 'react';
 import ServiceCard from './ServiceCard';
-import Kolibri from '../../public/images/kolibri.svg';
+import Kolibri from '../../public/images/Books.png';
 import Kiwix from '../../public/images/kiwix.png';
 import Ludo from '../../public/images/ludo.png';
 import RocketChat from '../../public/images/rocketchat.png';
@@ -19,9 +19,9 @@ import {
 
 export const SecondServicesSection = () => {
   return (
-    <div className="z-10 mx-8 my-24 md:mx-24">
-      <div className="ml-0 mb-8 w-full pb-4 text-xl text-orange-500 lg:ml-8 lg:w-2/4 lg:text-3xl">
-        <p>Accédez à tous les services de GOON sans internet</p>
+    <div className="z-10 mx-8 my-12 md:mx-24">
+      <div className="ml-0 mb-4 w-full pb-4 text-xl text-orange-500 lg:ml-16 lg:w-2/4 lg:text-3xl">
+        <p>Les services de GOON </p>
       </div>
       <div className="flex flex-wrap justify-center">
         <ServiceCard

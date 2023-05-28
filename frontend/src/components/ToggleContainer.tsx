@@ -5,9 +5,10 @@ import React, { useState } from 'react';
 type Props = {
   iframeUrl: any;
   iconSrc: any;
+  iframe: any;
 };
 
-const ToggleContainer: React.FC<Props> = ({ iframeUrl, iconSrc }) => {
+const ToggleContainer: React.FC<Props> = ({ iframeUrl, iconSrc, iframe }) => {
   const [click, setOnclick] = useState(true);
 
   return (
@@ -19,20 +20,14 @@ const ToggleContainer: React.FC<Props> = ({ iframeUrl, iconSrc }) => {
             : ` rounded-md bg-white opacity-100 shadow-2xl`
         }
       >
-        <iframe
-          className="sm:y-2 z-50 mt-32 mb-2 h-64 w-64 sm:w-fit "
-          src={iframeUrl}
-          allow="autoplay;"
-          height={430}
-          title="Iframe Example"
-        />
+        {iframe}
       </div>
       <div
         onClick={() => setOnclick(!click)}
-        className={`relative -bottom-2 left-0 right-0 m-auto h-16 w-16 cursor-pointer rounded-full  bg-orange-400 p-2 shadow-2xl transition duration-100 hover:scale-110 hover:transition hover:duration-100  sm:h-24 sm:w-24 sm:p-6`}
+        className={`relative top-44 -bottom-2 left-0 right-0 m-auto h-16 w-16 cursor-pointer rounded-full bg-orange-400  p-2 shadow-2xl transition duration-100 hover:scale-110 hover:transition hover:duration-100 sm:h-24  sm:w-24 sm:p-4 md:top-0`}
       >
         <span className="absolute right-6 top-0 h-3 w-3 animate-ping rounded-full bg-orange-400"></span>
-        <Image className=" " width={100} src={iconSrc} alt="Icon" />
+        <Image className="" width={200} src={iconSrc} alt="Icon" />
       </div>
     </div>
   );

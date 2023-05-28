@@ -6,6 +6,7 @@ import Banniere from '../../public/images/homeImage.png';
 import { GrMenu } from 'react-icons/gr';
 import { customLoader } from '@/lib/loader';
 import { useRouter } from 'next/navigation';
+import InternetForm from './InternetForm';
 
 type Props = {
   type?: string;
@@ -14,8 +15,10 @@ type Props = {
 
 const Header: React.FC<Props> = ({ type, image }) => {
   const [open, setOpen] = useState(false);
+  const [toggle, setToggle] = useState(false);
 
   const router = useRouter();
+
   return (
     <div
       className={
@@ -70,14 +73,13 @@ const Header: React.FC<Props> = ({ type, image }) => {
         <Link className="hover:text-orange-500" href="/">
           Accueil
         </Link>
-        <Link className="hover:text-orange-500" href="/">
-          Internet
-        </Link>
+
         <Link className="hover:text-orange-500" href="/services">
           Services
         </Link>
+
         <Link className="hover:text-orange-500 lg:mr-16" href="/blog">
-          Blog
+          Informations
         </Link>
       </div>
 
@@ -91,14 +93,23 @@ const Header: React.FC<Props> = ({ type, image }) => {
         <Link className="hover:text-orange-500" href="/">
           Accueil
         </Link>
-        <Link className="hover:text-orange-500" href="/">
-          Internet
-        </Link>
+
         <Link className="hover:text-orange-500" href="/services">
           Services
         </Link>
+
+        <div className=" ">
+          <div
+            className="relative cursor-pointer hover:text-orange-500"
+            onClick={(state) => setToggle(!toggle)}
+          >
+            Internet
+          </div>
+          {toggle ? <InternetForm /> : ''}
+        </div>
+
         <Link className="hover:text-orange-500 lg:mr-16" href="/blog">
-          Blog
+          Informations
         </Link>
       </div>
     </div>

@@ -11,19 +11,19 @@ type Props = {
 const HeroSectionText: React.FC<Props> = ({ data }) => {
   let newDate = new Date(data?.date);
   return (
-    <div className="absolute top-32 left-8 md:left-1/4 lg:absolute lg:left-1/4 lg:top-64">
+    <div className="absolute top-64 left-2 mx-4 shadow-xl md:left-1/4 lg:absolute lg:left-72 lg:top-64">
       <div className="flex flex-col text-white lg:flex lg:flex-col">
-        <div className="w-min bg-red-600 py-2 px-2 lg:w-min lg:py-2 lg:px-3">
-          Actualité
-        </div>
-        <Link href={`/blog/${data?.slug}`}>
+        <Link
+          className="rounded-md bg-orange-400 shadow-lg transition-all duration-200  hover:translate-y-1 hover:bg-orange-500 hover:transition-all hover:duration-200"
+          href={`/blog/${data?.slug}`}
+        >
           <div
             dangerouslySetInnerHTML={{ __html: data?.excerpt.rendered }}
-            className="py-4 text-normal md:text-xl lg:w-full lg:py-4 lg:text-3xl lg:font-bold"
+            className="px-8 py-4 text-normal md:text-xl lg:w-full lg:py-4 lg:text-3xl lg:font-bold"
           ></div>
         </Link>
 
-        <div className="flex lg:flex">
+        <div className="mt-4 flex lg:flex">
           <div className="flex items-center lg:flex lg:items-center">
             <span>
               <AiOutlineUser />

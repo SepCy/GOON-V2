@@ -29,6 +29,9 @@ body {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+.hero {
+  height: 600px;
+}
 
 p,
 h1,

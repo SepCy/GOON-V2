@@ -3,7 +3,7 @@
 <p align="center">
 <img  src="https://avatars.githubusercontent.com/u/116578301?s=200&v=4"  width="100"  alt="Goon"  /></p>
 
-Hi! Thank you for joinging GOON Community.
+Hi! Thank you for joining GOON Community.
 
 The starting place to build GOON on your own server and join our GOON Community
 
